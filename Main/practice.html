@@ -5,49 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Практика</title>
     <style>
-        body {
-            font-family: 'Times New Roman', Times, serif;
-            margin: 0;
-            padding: 0;
+        ul {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          overflow: hidden;
+          background-color: #333;
         }
-
-        #sidebar {
-            width: 200px;
-            height: 100%;
-            background: #484848;
-            position: fixed;
-            top: 0;
-            left: 0;
-            overflow-x: hidden;
-            padding-top: 20px;
+        
+        li {
+          float: left;
         }
-
-        #sidebar a {
-            padding: 15px 15px;
-            text-decoration: none;
-            font-size: 25px;
-            color: #fff;
-            display: block;
+        
+        li a {
+          display: block;
+          color: white;
+          text-align: center;
+          padding: 14px 16px;
+          text-decoration: none;
         }
-
-        #sidebar a:hover {
-            background: #555;
+        
+        li a:hover:not(.active) {
+          background-color: #111;
         }
-
-        #content {
-            margin-left: 260px;
-            padding: 20px;
+        
+        .active {
+          background-color: #04AA6D;
         }
     </style>
 </head>
 <body>
 
-    <div id="sidebar">
-        <a href="site.main.html">Начало</a>
-        <a href="theory.html">Теория</a>
-        <a href="file">?</a>
-        <a href="practice.html">Практика</a>
-    </div>
+    <ul>
+        <li><a href="site.main.html">Начало</a></li>
+        <li><a href="theory.html">Теория</a></li>
+        <li><a href="practice.html">Практика</a></li>
+        <li><a href="#about">?</a></li>
+      </ul>
     
 </body>
 </html>
