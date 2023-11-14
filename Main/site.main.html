@@ -5,25 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Електронна платка</title>
     <style>
-        ul {
-          list-style-type: none;
+        body, html {
+          height: 100%;
           margin: 0;
-          padding: 0;
-          overflow: hidden;
-          background-color: #333;
         }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+            display: flex;
+            justify-content: center; 
+            align-items: center; 
+          }
         
         li {
-          float: left;
+          margin-right: 20px;
         }
         
         li a {
-          display: block;
-          color: white;
-          text-align: center;
-          padding: 14px 16px;
-          text-decoration: none;
-        }
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+          }
         
         li a:hover:not(.active) {
           background-color: #111;
@@ -32,16 +40,37 @@
         .active {
           background-color: #04AA6D;
         }
+
+        .logo {
+          margin-left: -1050px;
+        }
+
+        .logo img {
+          height: 60px; 
+        }
+
+        .background {
+            background-image: url('gif.gif');
+            background-position: center;
+            background-size: cover;
+            overflow: hidden;
+            height: 100%;
+        }
     </style>
 </head>
 <body>
 
     <ul>
+        <li class="logo"><img src="logo.png" alt="Logo"></li>
         <li><a href="site.main.html">Начало</a></li>
         <li><a href="theory.html">Теория</a></li>
         <li><a href="practice.html">Практика</a></li>
         <li><a href="#about">?</a></li>
     </ul>
+
+    <div class="background">
+
+    </div>
 
 </body>
 </html>
