@@ -5,43 +5,91 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Теория</title>
     <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+        }
+
+        .container {
+            position: relative;
+        }
+
         ul {
-          list-style-type: none;
-          margin: 0;
-          padding: 0;
-          overflow: hidden;
-          background-color: #333;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+            display: flex;
+            justify-content: left; 
+            align-items: center; 
+            position: absolute;
+            width: 100%;
+            z-index: 2;
         }
-        
+
         li {
-          float: left;
+            margin-right: 20px;
         }
-        
+
         li a {
-          display: block;
-          color: white;
-          text-align: center;
-          padding: 14px 16px;
-          text-decoration: none;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 30px;
+            text-decoration: none;
+            font-size: 24px;
         }
-        
+
         li a:hover:not(.active) {
-          background-color: #111;
+            background-color: #111;
         }
-        
+
         .active {
-          background-color: #04AA6D;
+            background-color: #04AA6D;
         }
-        </style>
+
+        .logo img {
+            height: 90px; 
+            padding: 10px 10px;
+        }
+
+        .background {
+            background-image: url('gif.gif');
+            background-position: center;
+            background-size: cover;
+            overflow: hidden;
+            height: 100vh; 
+            position: relative;
+            z-index: 1;
+        }
+
+        .overlay-image {
+            position: relative;
+            top: 0;
+            left: 0;
+            width: 20%;
+            height: 40%;
+            padding: 140px 20px;
+        }
+    </style>
 </head>
 <body>
 
-    <ul>
-        <li><a href="site.main.html">Начало</a></li>
-        <li><a href="theory.html">Теория</a></li>
-        <li><a href="practice.html">Практика</a></li>
-        <li><a href="#about">?</a></li>
-      </ul>
-    
+    <div class="container">
+        <ul>
+            <li class="logo"><img src="logo.png" alt="Logo"></li>
+            <li><a href="site.main.html">Начало</a></li>
+            <li><a href="theory.html">Теория</a></li>
+            <li><a href="practice.html">Практика</a></li>
+            <li><a href="#about">?</a></li>
+        </ul>
+
+        <div class="background">
+
+            <img class="overlay-image" src="резистор.png" alt="Overlay Image">
+        </div>
+    </div>
+
 </body>
 </html>
