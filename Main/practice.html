@@ -5,21 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Практика</title>
     <link rel="stylesheet" href="style-practice.css">
-    <style>
-        div {
-          margin: 0em;
-          padding: 2em;
-        }
-        #source {
-          color: blue;
-          border: 1px solid black;
-        }
-        #target {
-          border: 1px solid black;
-        }
-      </style>
-
-      <script>
+    <script>
         function dragStartHandler(ev) {
           console.log("dragStart");
           ev.dataTransfer.setData("text/plain", ev.target.id);
