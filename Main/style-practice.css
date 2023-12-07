@@ -43,3 +43,14 @@ body, html {
     height: 60px; 
   }
 
+  div {
+    margin: 0em;
+    padding: 2em;
+  }
+  #source {
+    color: blue;
+    border: 1px solid black;
+  }
+  #target {
+    border: 1px solid black;
+  }
