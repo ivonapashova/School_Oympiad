@@ -43,10 +43,3 @@ body, html {
     height: 60px; 
   }
 
-  .background {
-      background-image: url('gif.gif');
-      background-position: center;
-      background-size: cover;
-      overflow: hidden;
-      height: 100%;
-  }
