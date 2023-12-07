@@ -5,27 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Практика</title>
     <link rel="stylesheet" href="style-practice.css">
-    <script>
-        function dragStartHandler(ev) {
-          console.log("dragStart");
-          ev.dataTransfer.setData("text/plain", ev.target.id);
-          const img = new Image();
-          img.src = "резистор.png";
-          ev.dataTransfer.setDragImage(img, 8, 8);
-        }
-  
-        function dragOverHandler(ev) {
-          console.log("dragOver");
-          ev.preventDefault();
-        }
-  
-        function dropHandler(ev) {
-          console.log("Drop");
-          ev.preventDefault();
-          const data = ev.dataTransfer.getData("text");
-          ev.target.appendChild(document.getElementById(data));
-        }
-      </script>
+    <body style="background-color:rgb(120, 123, 123);"></body>
 </head>
 <body>
 
@@ -53,6 +33,28 @@
   ondragover="dragOverHandler(event);">
   Drop Zone
 </div>
+
+<script>
+    function dragStartHandler(ev) {
+      console.log("dragStart");
+      ev.dataTransfer.setData("text/plain", ev.target.id);
+      const img = new Image();
+      img.src = "резистор.png";
+      ev.dataTransfer.setDragImage(img, 8, 8);
+    }
+
+    function dragOverHandler(ev) {
+      console.log("dragOver");
+      ev.preventDefault();
+    }
+
+    function dropHandler(ev) {
+      console.log("Drop");
+      ev.preventDefault();
+      const data = ev.dataTransfer.getData("text");
+      ev.target.appendChild(document.getElementById(data));
+    }
+  </script>
     
 </body>
 </html>
