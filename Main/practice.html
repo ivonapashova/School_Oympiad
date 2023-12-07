@@ -5,6 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Практика</title>
     <link rel="stylesheet" href="style-practice.css">
+    <style>
+        div {
+          margin: 0em;
+          padding: 2em;
+        }
+        #source {
+          color: blue;
+          border: 1px solid black;
+        }
+        #target {
+          border: 1px solid black;
+        }
+      </style>
+
+      <script>
+        function dragStartHandler(ev) {
+          console.log("dragStart");
+          ev.dataTransfer.setData("text/plain", ev.target.id);
+          const img = new Image();
+          img.src = "резистор.png";
+          ev.dataTransfer.setDragImage(img, 8, 8);
+        }
+  
+        function dragOverHandler(ev) {
+          console.log("dragOver");
+          ev.preventDefault();
+        }
+  
+        function dropHandler(ev) {
+          console.log("Drop");
+          ev.preventDefault();
+          const data = ev.dataTransfer.getData("text");
+          ev.target.appendChild(document.getElementById(data));
+        }
+      </script>
 </head>
 <body>
 
@@ -15,10 +50,23 @@
         <li><a href="practice.html">Практика</a></li>
         <li><a href="#about">?</a></li>
       </ul>
+ 
 
-      <div class="background">
+<div class="button-container">
+  <button onclick="enablePlacement()">запояване</button>
+  <button onclick="disablePlacement()">отпояване</button>
+</div>
 
-      </div>  
+
+<img src="резистор.png" id="source" ondragstart="dragStartHandler(event);" draggable="true">
+
+</div>
+<div
+  id="target"
+  ondrop="dropHandler(event);"
+  ondragover="dragOverHandler(event);">
+  Drop Zone
+</div>
     
 </body>
 </html>
